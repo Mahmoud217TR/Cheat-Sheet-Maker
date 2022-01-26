@@ -20,7 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/sheets', [App\Http\Controllers\SheetController::class, 'index'])->name('sheets');
+Route::get('/sheets/create', [App\Http\Controllers\SheetController::class, 'create'])->name('sheets.create');
+Route::post('/sheets', [App\Http\Controllers\SheetController::class, 'store'])->name('sheets.store');
