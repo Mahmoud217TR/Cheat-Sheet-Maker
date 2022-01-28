@@ -16,7 +16,28 @@ class Sheet extends Model
         'author_id'
     ];
 
+    protected $attributes = [
+		'theme' => 1
+	];
+
     public function author(){
         return $this->belongsTo(User::class);
     }
+
+    public function fields(){
+        return $this->hasMany(CheatField::class);
+    }
+
+    public function getThemes(){
+        return [
+            1 => 'light',
+            2 => 'dark',
+            3 => 'danger',
+            4 => 'warning'
+        ];
+    }
+
+    public function getThemeAttribute($attribute){
+		return $this->getThemes()[$attribute];
+	}
 }

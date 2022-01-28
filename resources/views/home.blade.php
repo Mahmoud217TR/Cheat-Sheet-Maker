@@ -9,6 +9,8 @@
 
                 <div class="card-body">
                     <a href="{{ route('sheets') }}">Check your cheat sheets</a>
+                    <br>
+                    <a href="{{ route('sheets.create') }}">Create a new cheat sheet</a>
                 </div>
             </div>
         </div>

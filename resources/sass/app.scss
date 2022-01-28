@@ -6,3 +6,95 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.desc-box{
+    min-height: 8rem;
+}
+
+.card-light{
+    color: $dark;
+
+    .card-header{
+        background-color: $light;
+    }
+
+    .card-body{
+        background-color: $white;
+    }
+
+    .desc-box{
+        color: $dark;
+        background-color: $gray;
+    }
+}
+
+.card-dark{
+    color: $light;
+
+    .card-header{
+        background-color: $dark;
+    }
+
+    .card-body{
+        background-color: $dark-gray;
+    }
+
+    .desc-box{
+        color: $dark;
+        background-color: $gray;
+    }
+}
+
+.card-danger{
+    color: $light;
+
+    .card-header{
+        background-color: $dangerous;
+    }
+
+    .card-body{
+        background-color: $danger;
+    }
+
+    .desc-box{
+        color: $dark;
+        background-color: $gray;
+    }
+}
+
+.card-warning{
+    color: $light;
+
+    .card-header{
+        background-color: $gold;
+    }
+
+    .card-body{
+        background-color: $warning;
+    }
+
+    .desc-box{
+        color: $dark;
+        background-color: $gray;
+    }
+}
+
+.theme-light{
+    background-color: $light;
+    color: $dark;
+}
+
+.theme-dark{
+    background-color: $dark;
+    color: $light;
+}
+
+.theme-danger{
+    background-color: $danger;
+    color: $light;
+}
+
+.theme-warning{
+    background-color: $warning;
+    color: $light;
+}

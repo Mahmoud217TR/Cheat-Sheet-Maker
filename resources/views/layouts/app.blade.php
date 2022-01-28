@@ -58,6 +58,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('sheets') }}">Your cheat sheets</a>
+                                    <a class="dropdown-item" href="{{ route('sheets.create') }}">Create a new cheat sheet</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

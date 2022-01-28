@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class CheatField extends Model
 {
     use HasFactory;
+
+    public function sheet(){
+        return $this->belongsTo(Sheet::class);
+    }
 }
