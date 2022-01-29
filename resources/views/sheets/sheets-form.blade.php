@@ -16,7 +16,7 @@
         <label for="description" class="col-form-label">Description: </label>
     </div>
     <div class="col-md-8">
-        <textarea id="description" name="description" type="text" class="form-control @error('description') is-invalid @enderror" style="resize:none" required>{{ old('description') ?? $sheet->description }}</textarea>
+        <textarea id="description" name="description" type="text" class="form-control text-area-resize-none @error('description') is-invalid @enderror" required>{{ old('description') ?? $sheet->description }}</textarea>
         @error('description')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

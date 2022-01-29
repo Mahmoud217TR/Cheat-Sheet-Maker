@@ -9,6 +9,12 @@ class CheatField extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'info',
+        'sheet_id'
+    ];
+
     public function sheet(){
         return $this->belongsTo(Sheet::class);
     }

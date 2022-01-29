@@ -35,7 +35,7 @@ class SheetController extends Controller
         $data['author_id'] = auth()->id();
         
         Sheet::create($data);
-        
+        flashAlert('success','Sheet Created Successfuly','check it in your cheat sheets');
         return redirect(route('sheets'));
     }
 
@@ -56,6 +56,7 @@ class SheetController extends Controller
         $this->authorize('update',$sheet);
         $data = $this->getValidData();
         $sheet->update($data);
+        flashAlert('success','Sheet Edited Successfuly','check it your edits');
         return redirect(route('sheets.show',$sheet->id));
     }
 
@@ -63,6 +64,7 @@ class SheetController extends Controller
         $sheet = Sheet::findOrFail($id);
         $this->authorize('delete',$sheet);
         $sheet->delete();
+        flashAlert('success','Sheet Deleted Successfuly','no longer can be restored');
         return redirect(route('sheets'));
     }
 }

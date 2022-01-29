@@ -63,7 +63,7 @@
 }
 
 .card-warning{
-    color: $light;
+    color: $dark;
 
     .card-header{
         background-color: $gold;
@@ -96,5 +96,35 @@
 
 .theme-warning{
     background-color: $warning;
-    color: $light;
+    color: $dark;
 }
+
+.floating-message{
+    position: fixed;
+    opacity: 0;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    animation: op0 6000ms ease;
+    visibility: hidden;
+    @keyframes op0 {
+      0%{
+        opacity: 1;
+        visibility: visible;
+      }
+      75%{
+        opacity: 1;
+        visibility: visible;
+      }
+      100%{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .text-area-resize-none{
+    resize:none;
+    min-height: 8rem!important;
+  }

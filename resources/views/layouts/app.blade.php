@@ -77,6 +77,10 @@
             </div>
         </nav>
 
+        @if(session()->has('alert-message'))
+            @include('layouts.alert')
+        @endif
+
         <main class="py-4">
             @yield('content')
         </main>
