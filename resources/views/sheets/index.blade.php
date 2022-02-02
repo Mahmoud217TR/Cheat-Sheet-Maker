@@ -8,7 +8,7 @@
             <div class="card card-{{ $sheet->theme }}">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h2 class="h4 m-0">{{ $sheet->title }}</h2>
+                        <h2 class="h4 m-0"><b>{{ $sheet->title }}</b></h2>
                         <div >
                             
                             <form action="{{ route('sheets.destroy',$sheet->id) }}" method="POST">
