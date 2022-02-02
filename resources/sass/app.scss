@@ -7,98 +7,6 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.desc-box{
-    min-height: 8rem;
-}
-
-.card-light{
-    color: $dark;
-
-    .card-header{
-        background-color: $light;
-    }
-
-    .card-body{
-        background-color: $white;
-    }
-
-    .desc-box{
-        color: $dark;
-        background-color: $gray;
-    }
-}
-
-.card-dark{
-    color: $light;
-
-    .card-header{
-        background-color: $dark;
-    }
-
-    .card-body{
-        background-color: $dark-gray;
-    }
-
-    .desc-box{
-        color: $dark;
-        background-color: $gray;
-    }
-}
-
-.card-danger{
-    color: $light;
-
-    .card-header{
-        background-color: $dangerous;
-    }
-
-    .card-body{
-        background-color: $danger;
-    }
-
-    .desc-box{
-        color: $dark;
-        background-color: $gray;
-    }
-}
-
-.card-warning{
-    color: $dark;
-
-    .card-header{
-        background-color: $gold;
-    }
-
-    .card-body{
-        background-color: $warning;
-    }
-
-    .desc-box{
-        color: $dark;
-        background-color: $gray;
-    }
-}
-
-.theme-light{
-    background-color: $light;
-    color: $dark;
-}
-
-.theme-dark{
-    background-color: $dark;
-    color: $light;
-}
-
-.theme-danger{
-    background-color: $danger;
-    color: $light;
-}
-
-.theme-warning{
-    background-color: $warning;
-    color: $dark;
-}
-
 .floating-message{
     position: fixed;
     opacity: 0;
@@ -127,4 +35,173 @@
   .text-area-resize-none{
     resize:none;
     min-height: 8rem!important;
+  }
+
+  .cheat-sheet{
+    .cheat-sheet-head{
+        margin: 0;
+        padding: 1rem 1rem;
+        text-align: center;
+        border-radius: .125rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cheat-sheet-desc{
+        padding: .5rem .5rem;
+        margin: 0;
+    }
+    .card{
+        border-radius: .125rem;
+    }
+    .cs-row{
+        padding: 1rem 1rem;
+        p{
+            margin: 0;
+        }
+    }
+    .cs-row:first-child{
+        border-radius: .125rem .125rem 0 0;
+    }
+    .cs-row:last-child{
+        border-radius: 0 0 .125rem .125rem;
+    }
+    .field-title{
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .field-info{
+        font-size: .8rem;
+    }
+  }
+
+  .theme-dark{
+    .cheat-sheet-head{
+        background-color: $dark;
+        color: $light;
+    }
+    .cs-row{
+        color: $light;
+    }
+    .cs-row:nth-child(odd){
+        background-color: $dark-1;
+    }
+    .cs-row:nth-child(even){
+        background-color: $dark-2;
+    }
+  }
+
+  .card-dark{
+        color: $light;
+      .card-header{
+        background-color: $dark;
+      }
+      .card-body{
+        background-color: $dark-2;
+      }
+  }
+
+  .theme-light{
+    .cheat-sheet-head{
+        background-color: $light-1;
+        color: $dark;
+    }
+    .cs-row{
+        color: $dark;
+    }
+    .cs-row:nth-child(odd){
+        background-color: $light-2;
+    }
+    .cs-row:nth-child(even){
+        background-color: $light-3;
+    }
+  }
+
+  .card-light{
+        color: $dark;
+      .card-header{
+        background-color: $light-2;
+      }
+      .card-body{
+        background-color: $light-1;
+      }
+  }
+
+  .theme-red{
+    .cheat-sheet-head{
+        background-color: $red;
+        color: $light;
+    }
+    .cs-row{
+        color: $light;
+    }
+    .cs-row:nth-child(odd){
+        background-color: $red-1;
+    }
+    .cs-row:nth-child(even){
+        background-color: $red-2;
+    }
+  }
+
+  .card-red{
+        color: $light;
+      .card-header{
+        background-color: $red;
+      }
+      .card-body{
+        background-color: $red-2;
+      }
+  }
+
+  .theme-gold{
+    .cheat-sheet-head{
+        background-color: $gold;
+        color: $dark;
+    }
+    .cs-row{
+        color: $dark;
+    }
+    .cs-row:nth-child(odd){
+        background-color: $gold-1;
+    }
+    .cs-row:nth-child(even){
+        background-color: $gold-2;
+    }
+  }
+
+  .card-gold{
+        color: $dark;
+      .card-header{
+        background-color: $gold-1;
+      }
+      .card-body{
+        background-color: $gold-2;
+      }
+  }
+
+  .theme-blue{
+    .cheat-sheet-head{
+        background-color: $blue;
+        color: $light;
+    }
+    .cs-row{
+        color: $light;
+    }
+    .cs-row:nth-child(odd){
+        background-color: $blue-1;
+    }
+    .cs-row:nth-child(even){
+        background-color: $blue-2;
+    }
+  }
+
+  .card-blue{
+        color: $light;
+      .card-header{
+        background-color: $blue-1;
+      }
+      .card-body{
+        background-color: $blue-2;
+      }
   }

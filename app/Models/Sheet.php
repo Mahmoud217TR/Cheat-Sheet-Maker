@@ -30,10 +30,11 @@ class Sheet extends Model
 
     public function getThemes(){
         return [
-            1 => 'light',
-            2 => 'dark',
-            3 => 'danger',
-            4 => 'warning'
+            1 => 'dark',
+            2 => 'light',
+            3 => 'red',
+            4 => 'gold',
+            5 => 'blue',
         ];
     }
 

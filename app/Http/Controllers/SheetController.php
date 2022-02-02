@@ -16,7 +16,7 @@ class SheetController extends Controller
         return request()->validate([
             'title'=>'required|string',
             'description'=>'required|string',
-            'theme'=>'required|int|min:1|max:4',
+            'theme'=>'required|int|min:1|max:5',
         ]);
     }
 
