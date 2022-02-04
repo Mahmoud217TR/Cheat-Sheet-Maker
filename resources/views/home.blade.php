@@ -8,9 +8,10 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    <a href="{{ route('sheets') }}">Check your cheat sheets</a>
-                    <br>
-                    <a href="{{ route('sheets.create') }}">Create a new cheat sheet</a>
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-primary mx-2" href="{{ route('sheets') }}">Check your cheat sheets</a>
+                        <a class="btn btn-success mx-2" href="{{ route('sheets.create') }}">Create a new cheat sheet</a>
+                    </div>
                 </div>
             </div>
         </div>

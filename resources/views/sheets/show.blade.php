@@ -4,14 +4,12 @@
 <div class="container">
     <div class="row mb-5">
         <div class="col d-flex justify-content-md-end justify-content-center">
-            <form action="{{ route('sheets.destroy',$sheet->id) }}" method="POST">
-                @csrf
-                @method('delete')
+            <div>
                 <a href="{{ route('fields',$sheet->id) }}" class="btn btn-success ms-2 my-md-0 my-2">Modify Fields</a>
                 <a class="btn btn-primary ms-2 my-md-0 my-2" href="{{ route('sheets.edit',$sheet->id) }}">Edit Sheet</a>
-                <button class="btn btn-danger ms-2 my-md-0 my-2" type="submit">Delete</button>
+                <delete-button url="{{ route('sheets.destroy',$sheet->id) }}" name = '{{ $sheet->title }}' theme='{{ $sheet->theme }}'></delete-button>
                 <a class="btn btn-dark ms-2" href="{{ route('sheets') }}">Back</a>
-            </form>
+            </div>
         </div>
     </div>
     <div class="cheat-sheet theme-{{ $sheet->theme }} my-3">
@@ -20,16 +18,14 @@
                 <h1 class="cheat-sheet-head">{{ $sheet->title }}</h1>
             </div>
             <div class="col-md-8">
-                <p class="cheat-sheet-desc text-muted">
-                    {{ $sheet->description }}
-                </p>
+                <p class="text-muted cheat-sheet-desc">{{ $sheet->description }}</p>
             </div>
         </div>
         <div class="row my-3">
             <div class="col">
                 <div class="card">
                     @if($sheet->fields->count() == 0)
-                        <h2 class="display-6 text-center p-5">No Fields on this Cheat Sheet Yet.</h2>
+                        <h2 class="display-6 text-center p-5 text-dark">No Fields on this Cheat Sheet Yet.</h2>
                     @else
                         @foreach ($sheet->fields as $field)
                             <div class="row cs-row m-0">

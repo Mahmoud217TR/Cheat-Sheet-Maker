@@ -29,9 +29,11 @@ Route::get('/sheets/{id}', [App\Http\Controllers\SheetController::class, 'show']
 Route::get('/sheets/{id}/edit', [App\Http\Controllers\SheetController::class, 'edit'])->name('sheets.edit');
 Route::patch('/sheets/{id}', [App\Http\Controllers\SheetController::class, 'update'])->name('sheets.update');
 Route::delete('/sheets/{id}', [App\Http\Controllers\SheetController::class, 'destroy'])->name('sheets.destroy');
+Route::get('/search', [App\Http\Controllers\SheetController::class, 'search'])->name('sheets.search');
 
 // Fields
 Route::get('/sheets/{id}/fields', [App\Http\Controllers\FieldController::class, 'index'])->name('fields');
+Route::get('/sheetsFields/{id}', [App\Http\Controllers\FieldController::class, 'get'])->name('fields.get');
 Route::post('/sheets/{id}/fields', [App\Http\Controllers\FieldController::class, 'store'])->name('fields.store');
 Route::patch('/fields/{id}', [App\Http\Controllers\FieldController::class, 'update'])->name('fields.update');
 Route::delete('/fields/{id}', [App\Http\Controllers\FieldController::class, 'destroy'])->name('fields.destroy');

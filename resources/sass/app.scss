@@ -9,11 +9,14 @@
 
 .floating-message{
     position: fixed;
-    opacity: 0;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 200;
+  }
+
+  .op100-0{
+    opacity: 0;
     animation: op0 6000ms ease;
     visibility: hidden;
     @keyframes op0 {
@@ -42,7 +45,7 @@
         margin: 0;
         padding: 1rem 1rem;
         text-align: center;
-        border-radius: .125rem;
+        border-radius: .25rem;
         height: 100%;
         display: flex;
         align-items: center;
@@ -53,7 +56,7 @@
         margin: 0;
     }
     .card{
-        border-radius: .125rem;
+        border-radius: .25rem;
     }
     .cs-row{
         padding: 1rem 1rem;
@@ -62,10 +65,10 @@
         }
     }
     .cs-row:first-child{
-        border-radius: .125rem .125rem 0 0;
+        border-radius: .25rem .25rem 0 0;
     }
     .cs-row:last-child{
-        border-radius: 0 0 .125rem .125rem;
+        border-radius: 0 0 .25rem .25rem;
     }
     .field-title{
         font-weight: bold;
@@ -77,12 +80,10 @@
   }
 
   .theme-dark{
+    background-color: $dark;
+    color: $light;
     .cheat-sheet-head{
         background-color: $dark;
-        color: $light;
-    }
-    .cs-row{
-        color: $light;
     }
     .cs-row:nth-child(odd){
         background-color: $dark-1;
@@ -93,22 +94,22 @@
   }
 
   .card-dark{
-        color: $light;
+      color: $light;
       .card-header{
         background-color: $dark;
+        color: $light;
       }
       .card-body{
         background-color: $dark-2;
+        color: $light;
       }
   }
 
   .theme-light{
+    color: $dark;
+    background-color: $light-1;
     .cheat-sheet-head{
         background-color: $light-1;
-        color: $dark;
-    }
-    .cs-row{
-        color: $dark;
     }
     .cs-row:nth-child(odd){
         background-color: $light-2;
@@ -119,22 +120,22 @@
   }
 
   .card-light{
-        color: $dark;
+      color: $dark;
       .card-header{
         background-color: $light-2;
+        color: $dark;
       }
       .card-body{
         background-color: $light-1;
+        color: $dark;
       }
   }
 
   .theme-red{
+    color: $light;
+    background-color: $red;
     .cheat-sheet-head{
         background-color: $red;
-        color: $light;
-    }
-    .cs-row{
-        color: $light;
     }
     .cs-row:nth-child(odd){
         background-color: $red-1;
@@ -145,22 +146,22 @@
   }
 
   .card-red{
-        color: $light;
+      color: $light;
       .card-header{
         background-color: $red;
+        color: $light;
       }
       .card-body{
         background-color: $red-2;
+        color: $light;
       }
   }
 
   .theme-gold{
+    color: $dark;
+    background-color: $gold;
     .cheat-sheet-head{
         background-color: $gold;
-        color: $dark;
-    }
-    .cs-row{
-        color: $dark;
     }
     .cs-row:nth-child(odd){
         background-color: $gold-1;
@@ -171,22 +172,22 @@
   }
 
   .card-gold{
-        color: $dark;
+      color: $dark;
       .card-header{
         background-color: $gold-1;
+        color: $dark;
       }
       .card-body{
         background-color: $gold-2;
+        color: $dark;
       }
   }
 
   .theme-blue{
+    color: $light;
+    background-color: $blue;
     .cheat-sheet-head{
         background-color: $blue;
-        color: $light;
-    }
-    .cs-row{
-        color: $light;
     }
     .cs-row:nth-child(odd){
         background-color: $blue-1;
@@ -197,11 +198,13 @@
   }
 
   .card-blue{
-        color: $light;
+      color: $light;
       .card-header{
         background-color: $blue-1;
+        color: $light;
       }
       .card-body{
         background-color: $blue-2;
+        color: $light;
       }
   }

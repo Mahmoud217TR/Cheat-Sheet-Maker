@@ -11288,11 +11288,14 @@ textarea.form-control-lg {
 }
 .floating-message {
   position: fixed;
-  opacity: 0;
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 200;
+}
+
+.op100-0 {
+  opacity: 0;
   -webkit-animation: op0 6000ms ease;
           animation: op0 6000ms ease;
   visibility: hidden;
@@ -11335,7 +11338,7 @@ textarea.form-control-lg {
   margin: 0;
   padding: 1rem 1rem;
   text-align: center;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -11346,7 +11349,7 @@ textarea.form-control-lg {
   margin: 0;
 }
 .cheat-sheet .card {
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
 }
 .cheat-sheet .cs-row {
   padding: 1rem 1rem;
@@ -11355,10 +11358,10 @@ textarea.form-control-lg {
   margin: 0;
 }
 .cheat-sheet .cs-row:first-child {
-  border-radius: 0.125rem 0.125rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 .cheat-sheet .cs-row:last-child {
-  border-radius: 0 0 0.125rem 0.125rem;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 .cheat-sheet .field-title {
   font-weight: bold;
@@ -11368,12 +11371,12 @@ textarea.form-control-lg {
   font-size: 0.8rem;
 }
 
-.theme-dark .cheat-sheet-head {
+.theme-dark {
   background-color: #212529;
   color: #f8f9fa;
 }
-.theme-dark .cs-row {
-  color: #f8f9fa;
+.theme-dark .cheat-sheet-head {
+  background-color: #212529;
 }
 .theme-dark .cs-row:nth-child(odd) {
   background-color: #22272A;
@@ -11387,17 +11390,19 @@ textarea.form-control-lg {
 }
 .card-dark .card-header {
   background-color: #212529;
+  color: #f8f9fa;
 }
 .card-dark .card-body {
   background-color: #394146;
+  color: #f8f9fa;
 }
 
+.theme-light {
+  color: #212529;
+  background-color: #DAE0E5;
+}
 .theme-light .cheat-sheet-head {
   background-color: #DAE0E5;
-  color: #212529;
-}
-.theme-light .cs-row {
-  color: #212529;
 }
 .theme-light .cs-row:nth-child(odd) {
   background-color: #9EAEBB;
@@ -11411,17 +11416,19 @@ textarea.form-control-lg {
 }
 .card-light .card-header {
   background-color: #9EAEBB;
+  color: #212529;
 }
 .card-light .card-body {
   background-color: #DAE0E5;
+  color: #212529;
 }
 
+.theme-red {
+  color: #f8f9fa;
+  background-color: #b90d1e;
+}
 .theme-red .cheat-sheet-head {
   background-color: #b90d1e;
-  color: #f8f9fa;
-}
-.theme-red .cs-row {
-  color: #f8f9fa;
 }
 .theme-red .cs-row:nth-child(odd) {
   background-color: #EF162C;
@@ -11435,17 +11442,19 @@ textarea.form-control-lg {
 }
 .card-red .card-header {
   background-color: #b90d1e;
+  color: #f8f9fa;
 }
 .card-red .card-body {
   background-color: #F23A4D;
+  color: #f8f9fa;
 }
 
+.theme-gold {
+  color: #212529;
+  background-color: #ffe23c;
+}
 .theme-gold .cheat-sheet-head {
   background-color: #ffe23c;
-  color: #212529;
-}
-.theme-gold .cs-row {
-  color: #212529;
 }
 .theme-gold .cs-row:nth-child(odd) {
   background-color: #FFDA09;
@@ -11459,17 +11468,19 @@ textarea.form-control-lg {
 }
 .card-gold .card-header {
   background-color: #FFDA09;
+  color: #212529;
 }
 .card-gold .card-body {
   background-color: #FFE555;
+  color: #212529;
 }
 
+.theme-blue {
+  color: #f8f9fa;
+  background-color: #0D6EFD;
+}
 .theme-blue .cheat-sheet-head {
   background-color: #0D6EFD;
-  color: #f8f9fa;
-}
-.theme-blue .cs-row {
-  color: #f8f9fa;
 }
 .theme-blue .cs-row:nth-child(odd) {
   background-color: #0257D5;
@@ -11483,7 +11494,9 @@ textarea.form-control-lg {
 }
 .card-blue .card-header {
   background-color: #0257D5;
+  color: #f8f9fa;
 }
 .card-blue .card-body {
   background-color: #5A9CFE;
+  color: #f8f9fa;
 }

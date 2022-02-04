@@ -46,8 +46,8 @@ class FieldController extends Controller
         $data = $this->getValidData();
         $field->update($data);
 
-        flashAlert('success','Field Updated Successfuly','check it your Sheet');
-        return back();
+        //flashAlert('success','Field Updated Successfuly','check it your Sheet');
+        //return back();
     }
 
     public function destroy($id){
@@ -57,6 +57,13 @@ class FieldController extends Controller
         $field->delete();
 
         flashAlert('success','Field Deleted Successfuly','no longer can be restored');
-        return back();
+        //return back();
+    }
+
+    public function get($id){
+        $sheet = Sheet::findOrFail($id);
+        $this->authorize('view',$sheet);
+
+        return $sheet->fields;
     }
 }

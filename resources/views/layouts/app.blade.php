@@ -32,8 +32,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav ms-auto my-3">
+                        <li class="nav-item">
+                            @if(!auth()->guest())
+                            <form class="d-flex justify-content-center" action="{{ route('sheets.search') }}">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id='keyword' name = 'keyword'>
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </form>
+                            @endif
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -58,6 +65,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('home') }}">Home</a>
                                     <a class="dropdown-item" href="{{ route('sheets') }}">Your cheat sheets</a>
                                     <a class="dropdown-item" href="{{ route('sheets.create') }}">Create a new cheat sheet</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

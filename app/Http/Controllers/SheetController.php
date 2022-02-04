@@ -65,6 +65,13 @@ class SheetController extends Controller
         $this->authorize('delete',$sheet);
         $sheet->delete();
         flashAlert('success','Sheet Deleted Successfuly','no longer can be restored');
-        return redirect(route('sheets'));
+        // return redirect(route('sheets'));
+        return route('sheets');
+    }
+
+    public function search(){
+        $keyword = request('keyword');
+        $sheets = auth()->user()->sheets()->where('title','like',"%{$keyword}%")->get();
+        return view('sheets.index',compact('sheets'));
     }
 }

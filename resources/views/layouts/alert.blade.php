@@ -1,3 +1,4 @@
-<div class="alert floating-message alert-{{ session()->get('alert-type') }}" role="alert">
-    <strong>{{ session()->get('alert-title') }}</strong>, {{ session()->get('alert-message') }}
-</div>
+<floating-alert type = "{{ session()->get('alert-type') }}"
+                title = "{{ session()->get('alert-title') }}"
+                message ="{{ session()->get('alert-message') }}">
+</floating-alert>
