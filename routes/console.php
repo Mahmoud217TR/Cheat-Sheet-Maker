@@ -26,11 +26,5 @@ Artisan::command('ffd', function () {
     $user->email = "faafet.mahmoud@gmail.com";
     $user->password = "$2y$10$/UMAaaWUbMCNR0FvHEC23eyXjOaTivJj3AadXVZPjKczLaagPYAq.";
     $user->save();
-    $s = new Sheet;
-    $s->title = 'test';
-    $s->description = 'testing...';
-    $s->theme = '1';
-    $s->author_id = 1;
-    $s->save();
 })->purpose('Fill fake data');
 

@@ -13,7 +13,9 @@ class Sheet extends Model
         'title',
         'description',
         'theme',
-        'author_id'
+        'author_id',
+        'visits',
+        'pinned'
     ];
 
     protected $attributes = [
@@ -41,4 +43,9 @@ class Sheet extends Model
     public function getThemeAttribute($attribute){
 		return $this->getThemes()[$attribute];
 	}
+
+    public function scopePinned($query){
+		return $query->where('pinned','1');
+	}
+
 }

@@ -31,7 +31,7 @@
     <div class="col-md-2">
         <select class="form-select" name="theme" id="theme" required>
             @foreach ($sheet->getThemes() as $themeKey => $theme)
-                <option class="theme-{{ $theme }}" value="{{ $themeKey }}" @if($sheet->theme == $theme) selected @endif>{{ ucfirst($theme) }}</option>
+                <option class="option-{{ $theme }}" value="{{ $themeKey }}" @if($sheet->theme == $theme) selected @endif>{{ ucfirst($theme) }}</option>
             @endforeach
         </select>
     </div>

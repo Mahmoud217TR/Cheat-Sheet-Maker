@@ -25,9 +25,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/sheets', [App\Http\Controllers\SheetController::class, 'index'])->name('sheets');
 Route::get('/sheets/create', [App\Http\Controllers\SheetController::class, 'create'])->name('sheets.create');
 Route::post('/sheets', [App\Http\Controllers\SheetController::class, 'store'])->name('sheets.store');
+Route::get('/sheets/pinned', [App\Http\Controllers\SheetController::class, 'pinned'])->name('sheets.pinned');
+Route::get('/sheets/most-visited', [App\Http\Controllers\SheetController::class, 'mostVisited'])->name('sheets.most');
 Route::get('/sheets/{id}', [App\Http\Controllers\SheetController::class, 'show'])->name('sheets.show');
+Route::get('/sheets/{id}/visit', [App\Http\Controllers\SheetController::class, 'visit'])->name('sheets.visit');
 Route::get('/sheets/{id}/edit', [App\Http\Controllers\SheetController::class, 'edit'])->name('sheets.edit');
 Route::patch('/sheets/{id}', [App\Http\Controllers\SheetController::class, 'update'])->name('sheets.update');
+Route::patch('/sheets/{id}/togglePin', [App\Http\Controllers\SheetController::class, 'togglePin'])->name('sheets.pin');
 Route::delete('/sheets/{id}', [App\Http\Controllers\SheetController::class, 'destroy'])->name('sheets.destroy');
 Route::get('/search', [App\Http\Controllers\SheetController::class, 'search'])->name('sheets.search');
 

@@ -30,4 +30,5 @@ app.component('delete-button', require('./components/DeleteButton.vue').default)
 app.component('modify-fields-component', require('./components/ModifyFieldsComponent.vue').default);
 app.component('modal', require('./components/Modal.vue').default);
 app.component('floating-alert', require('./components/FloatingAlert.vue').default);
+app.component('pin-button', require('./components/PinButton.vue').default);
 app.mount("#app");

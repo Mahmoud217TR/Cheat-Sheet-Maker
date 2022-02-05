@@ -19,6 +19,8 @@ class CreateSheetsTable extends Migration
             $table->text('description')->nullable();
             $table->unsignedBigInteger('theme');
             $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('visits');
+            $table->boolean('pinned');
             $table->timestamps();
             $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
         });

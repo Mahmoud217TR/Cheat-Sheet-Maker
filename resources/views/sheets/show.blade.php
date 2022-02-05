@@ -6,6 +6,7 @@
         <div class="col d-flex justify-content-md-end justify-content-center">
             <div>
                 <a href="{{ route('fields',$sheet->id) }}" class="btn btn-success ms-2 my-md-0 my-2">Modify Fields</a>
+                <pin-button url="{{ route('sheets.pin',$sheet->id) }}" initial-state="{{ $sheet->pinned }}"></pin-button>
                 <a class="btn btn-primary ms-2 my-md-0 my-2" href="{{ route('sheets.edit',$sheet->id) }}">Edit Sheet</a>
                 <delete-button url="{{ route('sheets.destroy',$sheet->id) }}" name = '{{ $sheet->title }}' theme='{{ $sheet->theme }}'></delete-button>
                 <a class="btn btn-dark ms-2" href="{{ route('sheets') }}">Back</a>

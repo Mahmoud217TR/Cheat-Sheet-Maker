@@ -11372,7 +11372,6 @@ textarea.form-control-lg {
 }
 
 .theme-dark {
-  background-color: #212529;
   color: #f8f9fa;
 }
 .theme-dark .cheat-sheet-head {
@@ -11383,6 +11382,11 @@ textarea.form-control-lg {
 }
 .theme-dark .cs-row:nth-child(even) {
   background-color: #394146;
+}
+
+.option-dark {
+  background-color: #212529;
+  color: #f8f9fa;
 }
 
 .card-dark {
@@ -11399,7 +11403,6 @@ textarea.form-control-lg {
 
 .theme-light {
   color: #212529;
-  background-color: #DAE0E5;
 }
 .theme-light .cheat-sheet-head {
   background-color: #DAE0E5;
@@ -11409,6 +11412,11 @@ textarea.form-control-lg {
 }
 .theme-light .cs-row:nth-child(even) {
   background-color: #F1F1F1;
+}
+
+.option-light {
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
 .card-light {
@@ -11425,7 +11433,6 @@ textarea.form-control-lg {
 
 .theme-red {
   color: #f8f9fa;
-  background-color: #b90d1e;
 }
 .theme-red .cheat-sheet-head {
   background-color: #b90d1e;
@@ -11435,6 +11442,11 @@ textarea.form-control-lg {
 }
 .theme-red .cs-row:nth-child(even) {
   background-color: #F23A4D;
+}
+
+.option-red {
+  background-color: #b90d1e;
+  color: #f8f9fa;
 }
 
 .card-red {
@@ -11451,7 +11463,6 @@ textarea.form-control-lg {
 
 .theme-gold {
   color: #212529;
-  background-color: #ffe23c;
 }
 .theme-gold .cheat-sheet-head {
   background-color: #ffe23c;
@@ -11461,6 +11472,11 @@ textarea.form-control-lg {
 }
 .theme-gold .cs-row:nth-child(even) {
   background-color: #FFE555;
+}
+
+.option-gold {
+  background-color: #ffe23c;
+  color: #212529;
 }
 
 .card-gold {
@@ -11477,7 +11493,6 @@ textarea.form-control-lg {
 
 .theme-blue {
   color: #f8f9fa;
-  background-color: #0D6EFD;
 }
 .theme-blue .cheat-sheet-head {
   background-color: #0D6EFD;
@@ -11487,6 +11502,11 @@ textarea.form-control-lg {
 }
 .theme-blue .cs-row:nth-child(even) {
   background-color: #5A9CFE;
+}
+
+.option-blue {
+  background-color: #0D6EFD;
+  color: #f8f9fa;
 }
 
 .card-blue {

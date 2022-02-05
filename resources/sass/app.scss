@@ -80,7 +80,6 @@
   }
 
   .theme-dark{
-    background-color: $dark;
     color: $light;
     .cheat-sheet-head{
         background-color: $dark;
@@ -91,6 +90,11 @@
     .cs-row:nth-child(even){
         background-color: $dark-2;
     }
+  }
+
+  .option-dark{
+    background-color: $dark;
+    color: $light;
   }
 
   .card-dark{
@@ -107,7 +111,6 @@
 
   .theme-light{
     color: $dark;
-    background-color: $light-1;
     .cheat-sheet-head{
         background-color: $light-1;
     }
@@ -117,6 +120,11 @@
     .cs-row:nth-child(even){
         background-color: $light-3;
     }
+  }
+
+  .option-light{
+    background-color: $light;
+    color: $dark;
   }
 
   .card-light{
@@ -133,7 +141,6 @@
 
   .theme-red{
     color: $light;
-    background-color: $red;
     .cheat-sheet-head{
         background-color: $red;
     }
@@ -143,6 +150,11 @@
     .cs-row:nth-child(even){
         background-color: $red-2;
     }
+  }
+  
+  .option-red{
+    background-color: $red;
+    color: $light;
   }
 
   .card-red{
@@ -159,7 +171,6 @@
 
   .theme-gold{
     color: $dark;
-    background-color: $gold;
     .cheat-sheet-head{
         background-color: $gold;
     }
@@ -169,6 +180,11 @@
     .cs-row:nth-child(even){
         background-color: $gold-2;
     }
+  }
+
+  .option-gold{
+    background-color: $gold;
+    color: $dark;
   }
 
   .card-gold{
@@ -185,7 +201,6 @@
 
   .theme-blue{
     color: $light;
-    background-color: $blue;
     .cheat-sheet-head{
         background-color: $blue;
     }
@@ -195,6 +210,11 @@
     .cs-row:nth-child(even){
         background-color: $blue-2;
     }
+  }
+
+  .option-blue{
+    background-color: $blue;
+    color: $light;
   }
 
   .card-blue{

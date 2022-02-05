@@ -20,8 +20,23 @@ class SheetController extends Controller
         ]);
     }
 
+    public function increaseVisits($sheet){
+        $sheet->visits = $sheet->visits+1;
+        $sheet->save();
+    }
+
     public function index(){
         $sheets = auth()->user()->sheets;
+        return view('sheets.index',compact('sheets'));
+    }
+
+    public function pinned(){
+        $sheets = auth()->user()->sheets()->pinned()->get();
+        return view('sheets.index',compact('sheets'));
+    
+    }
+    public function mostVisited(){
+        $sheets = auth()->user()->sheets()->orderBy('visits', 'desc')->take(10)->get();
         return view('sheets.index',compact('sheets'));
     }
 
@@ -33,16 +48,26 @@ class SheetController extends Controller
     public function store(){
         $data = $this->getValidData();
         $data['author_id'] = auth()->id();
+        $data['pinned'] = false;
+        $data['visits'] = 0;
         
-        Sheet::create($data);
+        $sheet = Sheet::create($data);
         flashAlert('success','Sheet Created Successfuly','check it in your cheat sheets');
-        return redirect(route('sheets'));
+        return redirect(route('sheets.show',$sheet->id));
     }
 
     public function show($id){
         $sheet=Sheet::findOrFail($id);
         $this->authorize('view',$sheet);
+        
         return view('sheets.show',compact('sheet'));
+    }
+
+    public function visit($id){
+        $sheet=Sheet::findOrFail($id);
+        $this->authorize('view',$sheet);
+        $this->increaseVisits($sheet);
+        return redirect(route('sheets.show',$id));
     }
 
     public function edit($id){
@@ -73,5 +98,13 @@ class SheetController extends Controller
         $keyword = request('keyword');
         $sheets = auth()->user()->sheets()->where('title','like',"%{$keyword}%")->get();
         return view('sheets.index',compact('sheets'));
+    }
+
+    public function togglePin($id){
+        $sheet = Sheet::findOrFail($id);
+        $this->authorize('update',$sheet);
+        $sheet->pinned = !$sheet->pinned;
+        $sheet->save();
+        return $sheet->pinned;
     }
 }
