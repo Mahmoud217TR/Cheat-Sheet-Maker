@@ -20,6 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/settings', [App\Http\Controllers\SettingsController::class, 'show'])->name('settings');
+Route::patch('/settings', [App\Http\Controllers\SettingsController::class, 'update'])->name('settings.update');
 
 // Sheets
 Route::get('/sheets', [App\Http\Controllers\SheetController::class, 'index'])->name('sheets');

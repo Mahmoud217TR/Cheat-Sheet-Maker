@@ -36,7 +36,8 @@ class SheetController extends Controller
     
     }
     public function mostVisited(){
-        $sheets = auth()->user()->sheets()->orderBy('visits', 'desc')->take(10)->get();
+        $m = auth()->user()->most_visited_filter;
+        $sheets = auth()->user()->sheets()->where('visits','>',0)->orderBy('visits', 'desc')->take($m)->get();
         return view('sheets.index',compact('sheets'));
     }
 

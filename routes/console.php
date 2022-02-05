@@ -4,6 +4,7 @@ use App\Models\Sheet;
 use App\Models\User;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Hash;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,13 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('ffd', function () {
-    $user = new User;
-    $user->name = "Mahmoud Mahmoud";
-    $user->email = "faafet.mahmoud@gmail.com";
-    $user->password = "$2y$10$/UMAaaWUbMCNR0FvHEC23eyXjOaTivJj3AadXVZPjKczLaagPYAq.";
-    $user->save();
+    $data = [
+        'name' => "Mahmoud Mahmoud",
+        'email' => "faafet.mahmoud@gmail.com",
+        'password' => Hash::make('123456789'),
+        'most_visited_filter' => 10,
+    ];
+
+    User::create($data);
 })->purpose('Fill fake data');
 

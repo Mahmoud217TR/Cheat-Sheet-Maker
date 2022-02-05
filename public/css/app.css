@@ -11345,6 +11345,9 @@ textarea.form-control-lg {
   justify-content: center;
 }
 .cheat-sheet .cheat-sheet-desc {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  height: 100%;
   padding: 0.5rem 0.5rem;
   margin: 0;
 }
