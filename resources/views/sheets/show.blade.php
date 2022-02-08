@@ -14,12 +14,12 @@
         </div>
     </div>
     <div class="cheat-sheet theme-{{ $sheet->theme }} my-3">
-        <div class="row my-3">
-            <div class="col-md-4">
-                <h1 class="cheat-sheet-head">{{ $sheet->title }}</h1>
+        <div class="row my-3 mb-5">
+            <div class="col-md-4 my-md-0 my-2">
+                <h1 class="cheat-sheet-head rounded-top">{{ $sheet->title }}</h1>
             </div>
-            <div class="col-md-8">
-                <p class="text-muted cheat-sheet-desc">{{ $sheet->description }}</p>
+            <div class="col-md-8 my-md-0 my-2">
+                <p class="text-muted cheat-sheet-desc papper d-flex align-items-center">{{ $sheet->description }}</p>
             </div>
         </div>
         <div class="row my-3">

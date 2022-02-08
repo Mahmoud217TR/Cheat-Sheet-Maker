@@ -28,10 +28,21 @@
             </div>
         </div>
         @endforeach
+        @if ($sheets->hasPages())
+            <div class="row my-5">
+                <div class="col d-flex justify-content-center">
+                    <a  class="btn @if($sheets->currentPage() > 1) btn-primary @else btn-secondary @endif mx-2" href="{{ $sheets->previousPageUrl() }}"><b>Previous</b></a>
+                    <span class="btn btn-light mx-2"><b>{{ $sheets->currentPage() }}</b></span>
+                    <a  class="btn @if($sheets->hasMorePages()) btn-primary @else btn-secondary @endif mx-2" href="{{ $sheets->nextPageUrl() }}"><b>Next</b></a>
+                </div>
+            </div>
+        @endif
     @else
-        <h1 class="display-1 text-center">
-            No Cheat Sheets here yet!
-        </h1>
+        <div class="papper my-5">
+            <h1 class="display-3 text-center">
+                No Cheat Sheets Found Here!
+            </h1>
+        </div>
     @endif
 </div>
 @endsection

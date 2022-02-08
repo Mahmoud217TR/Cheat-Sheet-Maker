@@ -25,19 +25,24 @@ class SheetController extends Controller
         $sheet->save();
     }
 
+    public function paginate($sheets){
+        $pageSize = 5;
+        return $sheets->simplePaginate($pageSize);
+    }
+
     public function index(){
-        $sheets = auth()->user()->sheets;
+        $sheets = $this->paginate(auth()->user()->sheets());
         return view('sheets.index',compact('sheets'));
     }
 
     public function pinned(){
-        $sheets = auth()->user()->sheets()->pinned()->get();
+        $sheets = $this->paginate(auth()->user()->sheets()->pinned());
         return view('sheets.index',compact('sheets'));
     
     }
     public function mostVisited(){
         $m = auth()->user()->most_visited_filter;
-        $sheets = auth()->user()->sheets()->where('visits','>',0)->orderBy('visits', 'desc')->take($m)->get();
+        $sheets = $this->paginate(auth()->user()->sheets()->where('visits','>',0)->orderBy('visits', 'desc')->take($m));
         return view('sheets.index',compact('sheets'));
     }
 
@@ -92,6 +97,9 @@ class SheetController extends Controller
         $sheet->delete();
         flashAlert('success','Sheet Deleted Successfuly','no longer can be restored');
         // return redirect(route('sheets'));
+        if(back()->getTargetUrl() != route('sheets.show',$id)){
+            return back()->getTargetUrl();
+        }
         return route('sheets');
     }
 

@@ -11286,6 +11286,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  margin-bottom: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
 .floating-message {
   position: fixed;
   top: 10%;
@@ -11334,6 +11342,10 @@ textarea.form-control-lg {
   min-height: 8rem !important;
 }
 
+.card {
+  border: 0;
+}
+
 .cheat-sheet .cheat-sheet-head {
   margin: 0;
   padding: 1rem 1rem;
@@ -11345,11 +11357,8 @@ textarea.form-control-lg {
   justify-content: center;
 }
 .cheat-sheet .cheat-sheet-desc {
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
   height: 100%;
-  padding: 0.5rem 0.5rem;
-  margin: 0;
+  padding: 1rem 1rem;
 }
 .cheat-sheet .card {
   border-radius: 0.25rem;
@@ -11522,4 +11531,90 @@ textarea.form-control-lg {
 .card-blue .card-body {
   background-color: #5A9CFE;
   color: #f8f9fa;
+}
+
+footer {
+  bottom: 0;
+  min-height: 20rem;
+}
+footer .container {
+  min-height: 20rem;
+}
+footer .container .main-row {
+  min-height: 20rem;
+}
+footer .container .links {
+  text-decoration: none;
+  color: #212529;
+}
+footer .container .links .img-container {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+}
+footer .container .links span {
+  margin: 0rem 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+footer .container .links:hover svg:not(.svg-sp) path {
+  fill: #ffc107;
+}
+footer .container .links:hover .svg-sp circle {
+  fill: #ffc107;
+}
+footer .container .links:hover span {
+  color: #ffc107;
+}
+footer .border-md {
+  border-bottom: 3px solid #dee2e6;
+  border-right: 0;
+}
+@media (min-width: 768px) {
+  footer .border-md {
+    border-right: 3px solid #dee2e6;
+    border-bottom: 0px;
+  }
+}
+
+.pepper-container {
+  min-height: 30rem;
+  position: relative;
+  padding: 10rem 2rem;
+}
+
+.papper {
+  background-color: #f8f9fa;
+  min-height: 20%;
+  position: relative;
+  border-radius: 0.125rem;
+  padding: 20% 0;
+}
+
+.papper::before {
+  content: "";
+  background-color: #b90d1e;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(2deg);
+  z-index: -1;
+  border-radius: 0.125rem;
+}
+
+.papper::after {
+  content: "";
+  background-color: #0D6EFD;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(-2deg);
+  z-index: -1;
+  border-radius: 0.125rem;
 }
