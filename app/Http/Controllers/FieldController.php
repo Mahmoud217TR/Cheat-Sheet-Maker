@@ -21,6 +21,12 @@ class FieldController extends Controller
         ]);
     }
 
+    public function convert($string){
+        $string = str_replace('<','&lt;',$string);
+        $string = str_replace('>','&gt;',$string);
+        return $string;
+    }
+
     public function index($id){
         $sheet = Sheet::findOrFail($id);
         $this->authorize('view',$sheet);
@@ -44,6 +50,7 @@ class FieldController extends Controller
         $sheet = $field->sheet;
         $this->authorize('update',$sheet);
         $data = $this->getValidData();
+        $data['info'] = $this->convert($data['info']);
         $field->update($data);
 
         //flashAlert('success','Field Updated Successfuly','check it your Sheet');
