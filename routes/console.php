@@ -21,14 +21,4 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-Artisan::command('ffd', function () {
-    $data = [
-        'name' => "Mahmoud Mahmoud",
-        'email' => "faafet.mahmoud@gmail.com",
-        'password' => Hash::make('123456789'),
-        'most_visited_filter' => 10,
-    ];
-
-    User::create($data);
-})->purpose('Fill fake data');
 
